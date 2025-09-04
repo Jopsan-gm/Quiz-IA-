@@ -90,6 +90,8 @@ export const useQuizProgress = (totalQuestions: number) => {
           {
             questionId,
             answer,
+            isCorrect: false,
+            correctAnswer: '',
             timestamp: new Date(),
             isMarked: false
           }
@@ -129,6 +131,8 @@ export const useQuizProgress = (totalQuestions: number) => {
           {
             questionId,
             answer: '', // Empty for multiple choice
+            isCorrect: false,
+            correctAnswer: '',
             timestamp: new Date(),
             isMarked: false,
             multipleChoiceAnswer: selectedOption

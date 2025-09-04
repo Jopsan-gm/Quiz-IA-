@@ -7,6 +7,7 @@ interface QuizSummaryProps {
   userAnswers: UserAnswer[];
   onResetQuiz: () => void;
   onReviewQuestion: (questionId: number) => void;
+  onBackToSubjects: () => void;
 }
 
 // Component for displaying quiz results summary
@@ -14,7 +15,8 @@ export const QuizSummary: React.FC<QuizSummaryProps> = ({
   questions,
   userAnswers,
   onResetQuiz,
-  onReviewQuestion
+  onReviewQuestion,
+  onBackToSubjects
 }) => {
   const { evaluateDevelopmentAnswer } = useAnswerEvaluation();
 
@@ -232,16 +234,19 @@ export const QuizSummary: React.FC<QuizSummaryProps> = ({
             );
           })}
         </div>
-      </div>
 
-      {/* Action Buttons */}
-      <div className="summary-actions">
-        <button onClick={onResetQuiz} className="reset-btn">
-          🔄 Reiniciar Quiz
-        </button>
-        <button onClick={() => onReviewQuestion(1)} className="review-btn">
-          📖 Revisar desde el Inicio
-        </button>
+        {/* Action Buttons */}
+        <div className="summary-actions">
+          <button onClick={onResetQuiz} className="reset-btn">
+            🔄 Reiniciar Quiz
+          </button>
+          <button onClick={() => onReviewQuestion(1)} className="review-btn">
+            📖 Revisar desde el Inicio
+          </button>
+          <button onClick={onBackToSubjects} className="review-btn">
+            📚 Volver a Materias
+          </button>
+        </div>
       </div>
     </div>
   );

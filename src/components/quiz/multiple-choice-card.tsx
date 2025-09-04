@@ -100,7 +100,7 @@ export const MultipleChoiceCard: React.FC<MultipleChoiceCardProps> = ({
 
       <div className="options-section">
         <h3>Selecciona la respuesta correcta:</h3>
-        <div className="options-grid">
+        <div className="options-list">
           {question.multipleChoice?.map((option) => (
             <button
               key={option.id}

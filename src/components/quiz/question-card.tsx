@@ -140,6 +140,25 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         <div className="question-text">
           {question.question}
         </div>
+        
+        {/* Lever Definitions Box - Only show when leverDefinitions exist */}
+        {question.leverDefinitions && (
+          <div className="lever-definitions-box">
+            <h4>Tipos de Palanca:</h4>
+            <div className="definition-item">
+              <span className="definition-label">Primer género:</span>
+              <span className="definition-text">{question.leverDefinitions.primerGenero}</span>
+            </div>
+            <div className="definition-item">
+              <span className="definition-label">Segundo género:</span>
+              <span className="definition-text">{question.leverDefinitions.segundoGenero}</span>
+            </div>
+            <div className="definition-item">
+              <span className="definition-label">Tercer género:</span>
+              <span className="definition-text">{question.leverDefinitions.tercerGenero}</span>
+            </div>
+          </div>
+        )}
       </div>
 
       <div className="answer-section">

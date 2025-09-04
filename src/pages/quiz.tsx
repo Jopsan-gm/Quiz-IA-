@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { questions } from '../data/questions';
+import { scienceQuestions } from '../data/science-questions';
 import { QuestionCard } from '../components/quiz/question-card';
 import { MultipleChoiceCard } from '../components/quiz/multiple-choice-card';
 import { Navigation } from '../components/quiz/navigation';
@@ -8,8 +10,23 @@ import { useQuizProgress } from '../hooks/use-quiz-progress';
 
 // Main quiz page component
 export const QuizPage: React.FC = () => {
+  const { subject } = useParams<{ subject: string }>();
+  const navigate = useNavigate();
   const [showAnswer, setShowAnswer] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  
+  // Select questions based on subject
+  const getQuestions = () => {
+    switch (subject) {
+      case 'science':
+        return scienceQuestions;
+      case 'social-studies':
+      default:
+        return questions;
+    }
+  };
+
+  const currentQuestions = getQuestions();
   
   const {
     progress,
@@ -22,15 +39,28 @@ export const QuizPage: React.FC = () => {
     resetProgress,
     getCurrentAnswer,
     getCurrentMultipleChoiceAnswer
-  } = useQuizProgress(questions.length);
+  } = useQuizProgress(currentQuestions.length);
 
-  const currentQuestion = questions[progress.currentQuestion - 1];
+  const currentQuestion = currentQuestions[progress.currentQuestion - 1];
   const currentAnswer = getCurrentAnswer(progress.currentQuestion);
   const currentMultipleChoiceAnswer = getCurrentMultipleChoiceAnswer(progress.currentQuestion);
 
+  // Get subject title and icon
+  const getSubjectInfo = () => {
+    switch (subject) {
+      case 'science':
+        return { title: '🔬 Ciencias', subtitle: 'Quiz de Desarrollo' };
+      case 'social-studies':
+      default:
+        return { title: '🏛️ Estudios Sociales', subtitle: 'Quiz de Desarrollo' };
+    }
+  };
+
+  const subjectInfo = getSubjectInfo();
+
   // Check if quiz is completed
   const isQuizCompleted = () => {
-    return progress.userAnswers.length === questions.length;
+    return progress.userAnswers.length === currentQuestions.length;
   };
 
   // Handle quiz completion
@@ -46,8 +76,6 @@ export const QuizPage: React.FC = () => {
     handleQuizCompletion();
   };
 
-
-
   // Handle review question from summary
   const handleReviewQuestion = (questionId: number) => {
     setShowSummary(false);
@@ -60,6 +88,11 @@ export const QuizPage: React.FC = () => {
     resetProgress();
   };
 
+  // Handle go back to subject selection
+  const handleBackToSubjects = () => {
+    navigate('/');
+  };
+
   const handleToggleAnswer = () => {
     setShowAnswer(!showAnswer);
   };
@@ -68,10 +101,11 @@ export const QuizPage: React.FC = () => {
   if (showSummary || isQuizCompleted()) {
     return (
       <QuizSummary
-        questions={questions}
+        questions={currentQuestions}
         userAnswers={progress.userAnswers}
         onResetQuiz={handleResetQuiz}
         onReviewQuestion={handleReviewQuestion}
+        onBackToSubjects={handleBackToSubjects}
       />
     );
   }
@@ -79,11 +113,14 @@ export const QuizPage: React.FC = () => {
   return (
     <div className="quiz-page">
       <div className="quiz-header">
-        <h1>📚 Estudios Sociales - Quiz de Desarrollo</h1>
+        <button className="back-button" onClick={handleBackToSubjects}>
+          ← Volver a Materias
+        </button>
+        <h1>{subjectInfo.title} - {subjectInfo.subtitle}</h1>
         <h2>
           {progress.isMultipleChoiceMode ? 'Quiz Opción Múltiple' : 'Quiz de Desarrollo'}
         </h2>
-        <p>Pregunta {progress.currentQuestion} de {questions.length}</p>
+        <p>Pregunta {progress.currentQuestion} de {currentQuestions.length}</p>
         <div className="mode-indicator">
           <span className={`mode-badge ${progress.isMultipleChoiceMode ? 'multiple-choice' : 'development'}`}>
             {progress.isMultipleChoiceMode ? 'A B C D' : '📝 Desarrollo'}
@@ -102,7 +139,7 @@ export const QuizPage: React.FC = () => {
               onPrevious={goToPreviousQuestion}
               onToggleMode={toggleMultipleChoiceMode}
               isFirst={progress.currentQuestion === 1}
-              isLast={questions.length === progress.currentQuestion}
+              isLast={currentQuestions.length === progress.currentQuestion}
               showAnswer={showAnswer}
               onToggleAnswer={handleToggleAnswer}
             />
@@ -115,7 +152,7 @@ export const QuizPage: React.FC = () => {
               onNext={handleNextQuestion}
               onPrevious={goToPreviousQuestion}
               isFirst={progress.currentQuestion === 1}
-              isLast={questions.length === progress.currentQuestion}
+              isLast={currentQuestions.length === progress.currentQuestion}
               showAnswer={showAnswer}
               onToggleAnswer={handleToggleAnswer}
             />
@@ -125,7 +162,7 @@ export const QuizPage: React.FC = () => {
         <div className="sidebar">
           <Navigation
             currentQuestion={progress.currentQuestion}
-            totalQuestions={questions.length}
+            totalQuestions={currentQuestions.length}
             completedQuestions={progress.completedQuestions}
             userAnswers={progress.userAnswers}
             onGoToQuestion={goToQuestion}
