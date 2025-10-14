@@ -4,222 +4,200 @@ import { Question } from '../types/quiz-types';
 export const questions: Question[] = [
   {
     id: 1,
-    question: "¿Cuáles fueron las razones de la expansión ultramarina de España en el siglo XV?",
-    answer: "España buscaba nuevas rutas comerciales hacia Asia, obtener riquezas (oro, plata, especias), difundir el cristianismo y aumentar su poder político y territorial frente a otras potencias.",
+    question: "¿Cuáles eran las generalidades de la vida urbana y rural durante la época colonial?",
+    answer: "Urbana: centrada en las ciudades coloniales con iglesias, plazas y edificios del gobierno; vivían españoles y criollos. Rural: dedicada a la agricultura, ganadería y vida más sencilla; habitada por indígenas, mestizos y campesinos.",
     multipleChoice: [
-      { id: 'A', text: 'España solo buscaba oro y plata para enriquecer a la corona, sin otros objetivos', isCorrect: false },
-      { id: 'B', text: 'Nuevas rutas comerciales, riquezas, expansión territorial y evangelizar', isCorrect: true },
-      { id: 'C', text: 'España quería únicamente conquistar territorios para aumentar su poder militar', isCorrect: false },
-      { id: 'D', text: 'España solo buscaba difundir la religión católica por el mundo', isCorrect: false }
+      { id: 'A', text: 'Urbana: solo comercio; Rural: solo ganadería', isCorrect: false },
+      { id: 'B', text: 'Urbana: ciudades con iglesias, plazas y gobierno (españoles y criollos); Rural: agricultura y ganadería (indígenas, mestizos)', isCorrect: true },
+      { id: 'C', text: 'No había diferencia entre urbana y rural', isCorrect: false },
+      { id: 'D', text: 'Urbana: solo indígenas; Rural: solo españoles', isCorrect: false }
     ]
   },
   {
     id: 2,
-    question: "¿Cuáles eran los nombres de los instrumentos y avances en navegación que se utilizaban en esa época?",
-    answer: "La brújula, el astrolabio, el cuadrante, los mapas portulanos y las carabelas con velas triangulares que permitían viajes largos.",
+    question: "¿Cómo era la estructura urbana y rural cotidiana en Costa Rica en la época colonial?",
+    answer: "Urbana: pueblos pequeños con iglesia, plaza y cabildo al centro. Rural: haciendas y fincas dispersas; la mayoría de la población trabajaba la tierra.",
     multipleChoice: [
-      { id: 'A', text: 'GPS, radar y computadoras de navegación satelital', isCorrect: false },
-      { id: 'B', text: 'Brújula, astrolabio, cuadrante, carabela, mapas portulanos', isCorrect: true },
-      { id: 'C', text: 'Solo brújula y mapas básicos, sin otros instrumentos', isCorrect: false },
-      { id: 'D', text: 'Sistemas de navegación electrónicos y satélites de comunicación', isCorrect: false }
+      { id: 'A', text: 'Urbana: grandes ciudades industriales; Rural: sin habitantes', isCorrect: false },
+      { id: 'B', text: 'Urbana: pueblos pequeños con iglesia, plaza y cabildo; Rural: haciendas dispersas donde se trabajaba la tierra', isCorrect: true },
+      { id: 'C', text: 'Todo era urbano sin áreas rurales', isCorrect: false },
+      { id: 'D', text: 'No había estructura definida', isCorrect: false }
     ]
   },
   {
     id: 3,
-    question: "¿Qué factores políticos, económicos y sociales impulsaron la expansión ultramarina?",
-    answer: "El fortalecimiento de las monarquías, el deseo de riquezas, el espíritu aventurero, el progreso en navegación y la búsqueda de prestigio internacional.",
+    question: "¿Cómo era la estructura y organización de los pueblos de indios y las misiones?",
+    answer: "Pueblos de indios: comunidades controladas por autoridades españolas, organizadas alrededor de una iglesia. Misiones: dirigidas por misioneros para evangelizar y educar indígenas, con tierras comunales.",
     multipleChoice: [
-      { id: 'A', text: 'Solo el hambre y la necesidad de encontrar alimentos para la población', isCorrect: false },
-      { id: 'B', text: 'Monarquías fuertes, búsqueda de oro y especias, deseo de prestigio y poder', isCorrect: true },
-      { id: 'C', text: 'España solo quería difundir la religión católica por el mundo', isCorrect: false },
-      { id: 'D', text: 'Solo la curiosidad científica y el deseo de explorar territorios desconocidos', isCorrect: false }
+      { id: 'A', text: 'Pueblos de indios: autónomos sin control español; Misiones: solo comerciales', isCorrect: false },
+      { id: 'B', text: 'Pueblos de indios: controlados por España, organizados alrededor de iglesia; Misiones: evangelización con tierras comunales', isCorrect: true },
+      { id: 'C', text: 'No existían pueblos de indios ni misiones', isCorrect: false },
+      { id: 'D', text: 'Ambos eran lo mismo', isCorrect: false }
     ]
   },
   {
     id: 4,
-    question: "¿Cuáles fueron las principales características de la conquista de las sociedades indígenas de América y Costa Rica?",
-    answer: "Fue violenta, impuso el dominio español, despojó tierras, explotó recursos, sometió a los indígenas y transformó sus culturas.",
+    question: "¿Cuáles eran las principales características de la explotación de minerales en la época colonial? (Marque con X)",
+    answer: "Controlada por la Corona española. Uso intensivo de mano de obra indígena o esclava. Minerales más explotados: oro y plata (principalmente en México y Perú).",
     multipleChoice: [
-      { id: 'A', text: 'Fueron completamente pacíficas y amigables, sin ningún conflicto', isCorrect: false },
-      { id: 'B', text: 'Solo se trató de intercambios comerciales y culturales', isCorrect: false },
-      { id: 'C', text: 'Violentas, con guerras, sometimiento, evangelización y explotación', isCorrect: true },
-      { id: 'D', text: 'Solo se realizaron exploraciones científicas y estudios culturales', isCorrect: false }
+      { id: 'A', text: 'Libre comercio de minerales; trabajo voluntario; explotación de diamantes', isCorrect: false },
+      { id: 'B', text: '☑ Controlada por la Corona española ☑ Mano de obra indígena/esclava ☑ Oro y plata en México y Perú', isCorrect: true },
+      { id: 'C', text: 'Solo en Costa Rica; sin control español', isCorrect: false },
+      { id: 'D', text: 'No había explotación minera', isCorrect: false }
     ]
   },
   {
     id: 5,
-    question: "¿Cómo eran los primeros conquistadores del territorio americano?",
-    answer: "Eran hombres jóvenes, aventureros, en busca de riqueza y poder, muchos sin grandes recursos económicos pero con ambición.",
+    question: "¿Cuáles eran las principales características de la agricultura y la ganadería en la época colonial? (Marque con X)",
+    answer: "Agricultura de autosuficiencia y exportación (cacao, azúcar, tabaco). Ganadería usada para alimentación y transporte. Dependencia de la mano de obra indígena.",
     multipleChoice: [
-      { id: 'A', text: 'Soldados ambiciosos, en busca de riquezas, fama y tierras', isCorrect: true },
-      { id: 'B', text: 'Solo misioneros pacíficos dedicados a la evangelización', isCorrect: false },
-      { id: 'C', text: 'Únicamente comerciantes interesados en el intercambio de productos', isCorrect: false },
-      { id: 'D', text: 'Solo exploradores científicos sin otros intereses', isCorrect: false }
+      { id: 'A', text: 'Solo agricultura de exportación; ganadería inexistente; trabajo español', isCorrect: false },
+      { id: 'B', text: '☑ Agricultura de autosuficiencia y exportación ☑ Ganadería para alimentación y transporte ☑ Mano de obra indígena', isCorrect: true },
+      { id: 'C', text: 'Solo ganadería; sin agricultura', isCorrect: false },
+      { id: 'D', text: 'Trabajo mecanizado sin mano de obra indígena', isCorrect: false }
     ]
   },
   {
     id: 6,
-    question: "¿Cuál es la diferencia entre conquista y colonización?",
-    answer: "Conquista: sometimiento militar y control de los pueblos. Colonización: organización social, política y económica bajo dominio español.",
+    question: "¿Cómo era el comercio colonial en América?",
+    answer: "Controlado por España mediante el monopolio comercial. Todo debía pasar por puertos autorizados. Comercio interno limitado y controlado por la metrópoli.",
     multipleChoice: [
-      { id: 'A', text: 'No hay ninguna diferencia, son términos que significan lo mismo', isCorrect: false },
-      { id: 'B', text: 'Conquista = sometimiento militar; Colonización = organización y poblamiento', isCorrect: true },
-      { id: 'C', text: 'Son procesos completamente idénticos que ocurren al mismo tiempo', isCorrect: false },
-      { id: 'D', text: 'Solo existe la conquista, la colonización no es un concepto válido', isCorrect: false }
+      { id: 'A', text: 'Libre comercio sin restricciones; múltiples puertos; sin control español', isCorrect: false },
+      { id: 'B', text: 'Monopolio español; solo puertos autorizados; comercio interno limitado', isCorrect: true },
+      { id: 'C', text: 'Controlado por indígenas', isCorrect: false },
+      { id: 'D', text: 'No existía comercio en la colonia', isCorrect: false }
     ]
   },
   {
     id: 7,
-    question: "¿Cuáles fueron las principales características de la conquista española del Caribe, de Centroamérica y de los imperios azteca e inca?",
-    answer: "En el Caribe: primeras bases españolas. En Centroamérica: resistencia indígena pero dominio español. En los imperios: caída rápida por alianzas indígenas, armas superiores y enfermedades.",
+    question: "¿Cuáles son tres características de la encomienda, la mita, el repartimiento y la esclavitud? (Marque con X)",
+    answer: "Encomienda: indígenas trabajaban a cambio de evangelización. Mita: trabajo obligatorio por turnos, especialmente en minas. Repartimiento: sistema de trabajo forzoso temporal. Esclavitud: propiedad total del amo, sin derechos.",
     multipleChoice: [
-      { id: 'A', text: 'Todas las conquistas fueron exactamente iguales en todos los territorios', isCorrect: false },
-      { id: 'B', text: 'Caribe: rápido y brutal; Centroamérica: alianzas y resistencia; Aztecas e Incas: derrotados con estrategia y epidemias', isCorrect: true },
-      { id: 'C', text: 'Todas las conquistas fueron completamente pacíficas y sin violencia', isCorrect: false },
-      { id: 'D', text: 'Solo se realizaron conquistas violentas sin ninguna variación', isCorrect: false }
+      { id: 'A', text: 'Todos eran sistemas de trabajo voluntario y remunerado', isCorrect: false },
+      { id: 'B', text: '☑ Encomienda: trabajo por evangelización ☑ Mita: turnos obligatorios en minas ☑ Esclavitud: sin derechos', isCorrect: true },
+      { id: 'C', text: 'Solo existía la esclavitud', isCorrect: false },
+      { id: 'D', text: 'Todos garantizaban derechos a los trabajadores', isCorrect: false }
     ]
   },
   {
     id: 8,
-    question: "¿Cómo influyeron la superioridad tecnológica, los conflictos indígenas y alianzas, los animales, la estrategia militar y la evangelización en la conquista europea sobre los pueblos aborígenes?",
-    answer: "Los españoles tenían armas de fuego, caballos, tácticas militares, se aliaron con pueblos enemigos de los imperios y usaron la religión como forma de control.",
+    question: "¿Cuáles son cinco costumbres y tradiciones heredadas de la vida colonial en Costa Rica? (Marque con X)",
+    answer: "Fiestas patronales. Procesiones religiosas. Comidas típicas como el tamal y gallo pinto. Rezos y novenas. Uso del café como centro social y económico.",
     multipleChoice: [
-      { id: 'A', text: 'Solo la superioridad tecnológica fue el factor determinante', isCorrect: false },
-      { id: 'B', text: 'Superioridad tecnológica, alianzas indígenas, caballos y perros, tácticas militares, imposición religiosa', isCorrect: true },
-      { id: 'C', text: 'Solo la religión y la evangelización fueron importantes', isCorrect: false },
-      { id: 'D', text: 'Solo los caballos y perros determinaron el resultado', isCorrect: false }
+      { id: 'A', text: 'Solo el fútbol y el béisbol', isCorrect: false },
+      { id: 'B', text: '☑ Fiestas patronales ☑ Procesiones ☑ Tamales y gallo pinto ☑ Novenas ☑ Cultura del café', isCorrect: true },
+      { id: 'C', text: 'No heredamos ninguna tradición colonial', isCorrect: false },
+      { id: 'D', text: 'Solo tradiciones indígenas sin influencia española', isCorrect: false }
     ]
   },
   {
     id: 9,
-    question: "¿Qué impacto tuvieron las epidemias en la catástrofe demográfica de los indígenas?",
-    answer: "Enfermedades como viruela y sarampión mataron a millones de indígenas, reduciendo drásticamente su población.",
+    question: "¿Cuáles son tres características básicas del movimiento de la Ilustración? (Marque con X)",
+    answer: "Uso de la razón sobre la fe. Búsqueda del progreso y conocimiento científico. Crítica al absolutismo y la Iglesia.",
     multipleChoice: [
-      { id: 'A', text: 'Las epidemias no tuvieron ningún impacto en la población indígena', isCorrect: false },
-      { id: 'B', text: 'Solo afectaron a una pequeña parte de la población', isCorrect: false },
-      { id: 'C', text: 'Epidemias como viruela mataron millones, debilitando la resistencia indígena', isCorrect: true },
-      { id: 'D', text: 'Solo afectaron a los conquistadores españoles, no a los indígenas', isCorrect: false }
+      { id: 'A', text: 'Fe sobre razón; rechazo de la ciencia; apoyo al absolutismo', isCorrect: false },
+      { id: 'B', text: '☑ Razón sobre fe ☑ Progreso y ciencia ☑ Crítica al absolutismo e Iglesia', isCorrect: true },
+      { id: 'C', text: 'Solo arte y literatura', isCorrect: false },
+      { id: 'D', text: 'Apoyo total a la monarquía', isCorrect: false }
     ]
   },
   {
     id: 10,
-    question: "¿Cuál fue el impacto de la conquista en las civilizaciones americanas?",
-    answer: "Destrucción de culturas, imposición del idioma español y la religión católica, pérdida de autonomía, explotación laboral y cambios en la vida social y política.",
+    question: "¿Cuáles son tres postulados de la Ilustración? (Marque con X)",
+    answer: "Libertad individual. Igualdad ante la ley. Separación de poderes.",
     multipleChoice: [
-      { id: 'A', text: 'Solo trajo mejoras y progreso para las civilizaciones americanas', isCorrect: false },
-      { id: 'B', text: 'Destrucción de culturas, pérdida de población, sometimiento y cambios en la vida cotidiana', isCorrect: true },
-      { id: 'C', text: 'No hubo ningún cambio en las civilizaciones americanas', isCorrect: false },
-      { id: 'D', text: 'Solo trajo cambios positivos sin consecuencias negativas', isCorrect: false }
+      { id: 'A', text: 'Poder absoluto del rey; desigualdad social; concentración del poder', isCorrect: false },
+      { id: 'B', text: '☑ Libertad individual ☑ Igualdad ante la ley ☑ Separación de poderes', isCorrect: true },
+      { id: 'C', text: 'Solo la fe religiosa', isCorrect: false },
+      { id: 'D', text: 'Centralización del poder en la Iglesia', isCorrect: false }
     ]
   },
   {
     id: 11,
-    question: "¿Qué efectos tuvo la evangelización sobre las sociedades indígenas?",
-    answer: "Conversión al cristianismo, pérdida de religiones tradicionales, mezcla cultural y construcción de iglesias y escuelas religiosas.",
+    question: "¿Cuáles son tres aspectos del pensamiento de John Locke, Voltaire, Montesquieu y Rousseau? (Marque con X)",
+    answer: "Locke: derechos naturales (vida, libertad, propiedad). Voltaire: libertad de expresión y religión. Montesquieu: división de poderes. Rousseau: soberanía del pueblo y contrato social.",
     multipleChoice: [
-      { id: 'A', text: 'Solo impuso el catolicismo sin otros efectos', isCorrect: false },
-      { id: 'B', text: 'Impuso el catolicismo, eliminó creencias indígenas y creó sincretismo', isCorrect: true },
-      { id: 'C', text: 'No tuvo ningún efecto sobre las sociedades indígenas', isCorrect: false },
-      { id: 'D', text: 'Solo creó sincretismo sin imponer religión', isCorrect: false }
+      { id: 'A', text: 'Todos apoyaban el absolutismo monárquico', isCorrect: false },
+      { id: 'B', text: '☑ Locke: derechos naturales ☑ Voltaire: libertad de expresión ☑ Montesquieu: división de poderes', isCorrect: true },
+      { id: 'C', text: 'Solo criticaban a la Iglesia', isCorrect: false },
+      { id: 'D', text: 'Todos eran monárquicos conservadores', isCorrect: false }
     ]
   },
   {
     id: 12,
-    question: "¿Cómo eran las visiones del mundo de los españoles e indígenas en la época de estudio?",
-    answer: "Los españoles tenían visión eurocéntrica y cristiana; los indígenas veían la naturaleza como sagrada y vivían en armonía con ella.",
+    question: "¿Cuáles son tres aspectos que caracterizan a la Ilustración respecto a la economía? (Marque con X)",
+    answer: "Defensa de la libre competencia. Crítica al mercantilismo. Valor del trabajo y la producción como fuente de riqueza.",
     multipleChoice: [
-      { id: 'A', text: 'Eran exactamente iguales, sin diferencias culturales', isCorrect: false },
-      { id: 'B', text: 'Españoles: visión eurocéntrica y religiosa; Indígenas: espiritualidad ligada a la naturaleza', isCorrect: true },
-      { id: 'C', text: 'Solo tenían visiones religiosas, sin otras diferencias', isCorrect: false },
-      { id: 'D', text: 'Solo tenían visiones naturales, sin diferencias culturales', isCorrect: false }
+      { id: 'A', text: 'Apoyo al mercantilismo; monopolios reales; rechazo al trabajo', isCorrect: false },
+      { id: 'B', text: '☑ Libre competencia ☑ Crítica al mercantilismo ☑ Trabajo y producción como riqueza', isCorrect: true },
+      { id: 'C', text: 'Solo la agricultura como fuente de riqueza', isCorrect: false },
+      { id: 'D', text: 'Control total del Estado sobre la economía', isCorrect: false }
     ]
   },
   {
     id: 13,
-    question: "¿Cuál fue la actitud de los conquistadores respecto a la religión y la visión de la naturaleza de los indígenas?",
-    answer: "Consideraban la religión indígena como idolatría, buscaban reemplazarla con el cristianismo y explotaban la naturaleza como recurso económico.",
+    question: "¿Qué es la Enciclopedia? (dos aspectos)",
+    answer: "Obra que reunió todo el conocimiento de la época. Representó la difusión de las ideas ilustradas.",
     multipleChoice: [
-      { id: 'A', text: 'Los españoles respetaban completamente todas las creencias indígenas', isCorrect: false },
-      { id: 'B', text: 'Españoles despreciaban religiones indígenas, veían la naturaleza como recurso', isCorrect: true },
-      { id: 'C', text: 'Los españoles no tenían ninguna actitud hacia estos temas', isCorrect: false },
-      { id: 'D', text: 'Los españoles solo respetaban la naturaleza, no las religiones', isCorrect: false }
+      { id: 'A', text: 'Un libro religioso medieval', isCorrect: false },
+      { id: 'B', text: 'Obra que reunió el conocimiento de la época y difundió las ideas ilustradas', isCorrect: true },
+      { id: 'C', text: 'Solo un diccionario común', isCorrect: false },
+      { id: 'D', text: 'Una novela de aventuras', isCorrect: false }
     ]
   },
   {
     id: 14,
-    question: "¿Cuáles fueron las características del Real y Supremo Consejo de Indias, la Casa de Contratación de Sevilla, los Virreinatos, las Capitanías Generales, la Real Audiencia, los Gobernadores, el Cabildo, las Alcaldías y Corregimientos?",
-    answer: "Consejo de Indias: máximo órgano administrativo y judicial. Casa de Contratación: control del comercio y navegación. Virreinatos: grandes territorios gobernados por virreyes. Capitanías Generales: territorios más pequeños con autoridad militar. Real Audiencia: tribunales de justicia. Gobernadores: controlaban provincias. Cabildos: gobiernos locales. Alcaldías y corregimientos: justicia y administración en ciudades y pueblos.",
+    question: "¿Qué es el despotismo ilustrado?",
+    answer: "Forma de gobierno donde los reyes aplicaron ideas ilustradas sin dejar el poder absoluto ('Todo para el pueblo, pero sin el pueblo').",
     multipleChoice: [
-      { id: 'A', text: 'Solo se encargaban de la legislación, sin otras funciones', isCorrect: false },
-      { id: 'B', text: 'Consejo de Indias: legislación; Casa de Contratación: comercio; Virreinatos y Capitanías: gobiernos regionales; Audiencia: justicia; Cabildo y Alcaldías: gobierno local', isCorrect: true },
-      { id: 'C', text: 'Solo se encargaban del comercio, sin otras responsabilidades', isCorrect: false },
-      { id: 'D', text: 'Solo se encargaban de la justicia, sin otras funciones', isCorrect: false }
+      { id: 'A', text: 'Democracia total con participación popular', isCorrect: false },
+      { id: 'B', text: 'Reyes aplicando ideas ilustradas sin dejar el poder absoluto', isCorrect: true },
+      { id: 'C', text: 'Gobierno del pueblo por el pueblo', isCorrect: false },
+      { id: 'D', text: 'Abolición completa de la monarquía', isCorrect: false }
     ]
   },
   {
     id: 15,
-    question: "¿Cuáles fueron las principales características de la jerarquía social en el imperio español?",
-    answer: "En la cima los peninsulares, luego criollos, mestizos, indígenas y esclavos africanos en la base.",
+    question: "¿Cuáles fueron los cambios políticos, religiosos y científicos del Antiguo Régimen respecto a la Ilustración? (Marque con X)",
+    answer: "Políticos: fin del absolutismo, inicio de las ideas democráticas. Religiosos: tolerancia religiosa, menor poder de la Iglesia. Científicos: auge de la observación, experimentación y razón.",
     multipleChoice: [
-      { id: 'A', text: 'Todos los grupos sociales tenían exactamente los mismos derechos', isCorrect: false },
-      { id: 'B', text: 'Jerarquía: peninsulares, criollos, mestizos, indígenas y esclavos', isCorrect: true },
-      { id: 'C', text: 'Solo existían los peninsulares, sin otros grupos', isCorrect: false },
-      { id: 'D', text: 'Solo existían los indígenas, sin otros grupos sociales', isCorrect: false }
+      { id: 'A', text: 'Fortalecimiento del absolutismo y la Iglesia; rechazo a la ciencia', isCorrect: false },
+      { id: 'B', text: '☑ Fin del absolutismo ☑ Tolerancia religiosa ☑ Auge de observación y experimentación', isCorrect: true },
+      { id: 'C', text: 'Sin cambios significativos', isCorrect: false },
+      { id: 'D', text: 'Solo cambios artísticos', isCorrect: false }
     ]
   },
   {
     id: 16,
-    question: "¿Cómo se organizaba la sociedad durante la colonia?",
-    answer: "En estamentos rígidos según origen y raza, con privilegios para españoles y discriminación hacia indígenas y afrodescendientes.",
+    question: "¿Cuáles fueron las causas económicas, políticas, sociales y filosóficas de la Revolución Francesa?",
+    answer: "Económicas: crisis financiera y altos impuestos. Políticas: abuso del poder real. Sociales: desigualdad entre estamentos. Filosóficas: ideas de la Ilustración sobre libertad e igualdad.",
     multipleChoice: [
-      { id: 'A', text: 'Todos los grupos sociales tenían exactamente las mismas oportunidades', isCorrect: false },
-      { id: 'B', text: 'Organizada en castas, con desigualdades sociales marcadas', isCorrect: true },
-      { id: 'C', text: 'Solo se organizaba por edad, sin otras categorías', isCorrect: false },
-      { id: 'D', text: 'Solo se organizaba por género, sin otras categorías', isCorrect: false }
+      { id: 'A', text: 'Prosperidad económica; rey justo; igualdad social; ideas conservadoras', isCorrect: false },
+      { id: 'B', text: 'Crisis financiera; abuso real; desigualdad entre estamentos; ideas ilustradas', isCorrect: true },
+      { id: 'C', text: 'Solo causas militares', isCorrect: false },
+      { id: 'D', text: 'Solo invasiones extranjeras', isCorrect: false }
     ]
   },
   {
     id: 17,
-    question: "¿Cuál fue el poder de la Iglesia Católica en la época colonial?",
-    answer: "Tenía gran influencia en política, educación, moral, cultura y en la conversión religiosa de los pueblos indígenas.",
+    question: "¿Cuáles son tres características del Imperio Napoleónico? (Marque con X)",
+    answer: "Expansión militar por Europa. Implantación del Código Napoleónico. Difusión de ideas de libertad e igualdad.",
     multipleChoice: [
-      { id: 'A', text: 'La Iglesia solo se encargaba de la religión, sin otros poderes', isCorrect: false },
-      { id: 'B', text: 'La Iglesia controlaba educación, cultura, moral, política y economía', isCorrect: true },
-      { id: 'C', text: 'La Iglesia no tenía ningún poder en la época colonial', isCorrect: false },
-      { id: 'D', text: 'La Iglesia solo se encargaba de la educación, sin otros poderes', isCorrect: false }
+      { id: 'A', text: 'Pacifismo total; sin leyes; vuelta al feudalismo', isCorrect: false },
+      { id: 'B', text: '☑ Expansión militar ☑ Código Napoleónico ☑ Difusión de libertad e igualdad', isCorrect: true },
+      { id: 'C', text: 'Solo conquistas en América', isCorrect: false },
+      { id: 'D', text: 'Restauración del absolutismo puro', isCorrect: false }
     ]
   },
   {
     id: 18,
-    question: "¿Qué características sociales, económicas, políticas y culturales tuvieron las sociedades coloniales?",
-    answer: "Sociales: jerarquía rígida. Económicas: minería, agricultura y comercio controlado. Políticas: dominio español con virreinatos y cabildos. Culturales: mezcla de tradiciones indígenas, africanas y europeas.",
+    question: "¿Cuáles fueron cinco repercusiones de la Revolución Francesa? (Marque con X)",
+    answer: "Fin del absolutismo en Francia. Declaración de los Derechos del Hombre. Inspiración para revoluciones en América. Separación Iglesia–Estado. Surgimiento del nacionalismo.",
     multipleChoice: [
-      { id: 'A', text: 'Solo tenían características económicas, sin otros aspectos', isCorrect: false },
-      { id: 'B', text: 'Economía basada en agricultura y minería, sociedad estratificada, poder centralizado en la monarquía y la Iglesia', isCorrect: true },
-      { id: 'C', text: 'Solo tenían características políticas, sin otros aspectos', isCorrect: false },
-      { id: 'D', text: 'Solo tenían características culturales, sin otros aspectos', isCorrect: false }
-    ]
-  },
-  {
-    id: 19,
-    question: "¿Qué características tenían las sociedades coloniales de América entre los siglos XVI y XVIII?",
-    answer: "Se caracterizaron por la mezcla cultural, la explotación de indígenas, el surgimiento de nuevas ciudades y el poder de la Iglesia.",
-    multipleChoice: [
-      { id: 'A', text: 'Las colonias eran completamente independientes de España', isCorrect: false },
-      { id: 'B', text: 'Colonias dependientes de España, con comercio controlado, diversidad cultural y mezcla étnica', isCorrect: true },
-      { id: 'C', text: 'Las colonias solo tenían características comerciales', isCorrect: false },
-      { id: 'D', text: 'Las colonias solo tenían características culturales', isCorrect: false }
-    ]
-  },
-  {
-    id: 20,
-    question: "¿Qué importancia tuvo la expansión ultramarina de España en los siglos XV y XVI?",
-    answer: "Fue un proceso de exploración y conquista para ampliar territorios, obtener riquezas y difundir el cristianismo, apoyado en avances de navegación.",
-    multipleChoice: [
-      { id: 'A', text: 'Solo tuvo importancia comercial, sin otros aspectos', isCorrect: false },
-      { id: 'B', text: 'Dio origen al imperio español, expansión cultural, intercambio comercial y colonización de América', isCorrect: true },
-      { id: 'C', text: 'No tuvo ninguna importancia histórica', isCorrect: false },
-      { id: 'D', text: 'Solo tuvo importancia cultural, sin otros aspectos', isCorrect: false }
+      { id: 'A', text: 'Fortalecimiento de la monarquía; ningún impacto en América', isCorrect: false },
+      { id: 'B', text: '☑ Fin del absolutismo ☑ Derechos del Hombre ☑ Inspiró revoluciones americanas ☑ Separación Iglesia-Estado ☑ Nacionalismo', isCorrect: true },
+      { id: 'C', text: 'Solo cambios en Francia sin impacto global', isCorrect: false },
+      { id: 'D', text: 'Vuelta al feudalismo', isCorrect: false }
     ]
   }
 ];
