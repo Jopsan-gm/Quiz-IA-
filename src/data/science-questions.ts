@@ -5,9 +5,9 @@ export const scienceQuestions: Question[] = [
   {
     id: 1,
     question: "Grupo de dos o más átomos iguales o diferentes unidos por enlaces químicos.",
-    answer: "Molécula - conjunto de átomos unidos por enlaces químicos que forman una unidad estable.",
+    answer: "Moléculas compuestas - conjunto de átomos unidos por enlaces químicos que forman una unidad estable.",
     multipleChoice: [
-      { id: 'A', text: 'Molécula', isCorrect: true },
+      { id: 'A', text: 'Moléculas compuestas', isCorrect: true },
       { id: 'B', text: 'Átomo', isCorrect: false },
       { id: 'C', text: 'Elemento', isCorrect: false },
       { id: 'D', text: 'Compuesto', isCorrect: false }
@@ -176,6 +176,94 @@ export const scienceQuestions: Question[] = [
       { id: 'B', text: 'Ácido nítrico', isCorrect: false },
       { id: 'C', text: 'Ácido clorhídrico (HCl)', isCorrect: true },
       { id: 'D', text: 'Ácido fosfórico', isCorrect: false }
+    ]
+  },
+  {
+    id: 17,
+    question: "Escriba el nombre del siguiente compuesto químico: Na2O",
+    answer: "Óxido de sodio - compuesto iónico formado por dos átomos de sodio y un átomo de oxígeno.",
+    multipleChoice: [
+      { id: 'A', text: 'Óxido de sodio', isCorrect: true },
+      { id: 'B', text: 'Óxido de nitrógeno', isCorrect: false },
+      { id: 'C', text: 'Óxido de potasio', isCorrect: false },
+      { id: 'D', text: 'Óxido de magnesio', isCorrect: false }
+    ]
+  },
+  {
+    id: 18,
+    question: "Escriba el nombre del siguiente compuesto químico: CaCO3",
+    answer: "Carbonato de calcio - compuesto iónico formado por un átomo de calcio y un ion carbonato (CO3).",
+    multipleChoice: [
+      { id: 'A', text: 'Carbonato de magnesio', isCorrect: false },
+      { id: 'B', text: 'Carbonato de calcio', isCorrect: true },
+      { id: 'C', text: 'Carbonato de sodio', isCorrect: false },
+      { id: 'D', text: 'Carbonato de potasio', isCorrect: false }
+    ]
+  },
+  {
+    id: 19,
+    question: "Escriba el nombre del siguiente compuesto químico: CO2",
+    answer: "Dióxido de carbono - compuesto covalente formado por un átomo de carbono y dos átomos de oxígeno.",
+    multipleChoice: [
+      { id: 'A', text: 'Monóxido de carbono', isCorrect: false },
+      { id: 'B', text: 'Dióxido de azufre', isCorrect: false },
+      { id: 'C', text: 'Dióxido de carbono', isCorrect: true },
+      { id: 'D', text: 'Trióxido de carbono', isCorrect: false }
+    ]
+  },
+  {
+    id: 20,
+    question: "Escriba el nombre del siguiente compuesto químico: SO2",
+    answer: "Dióxido de azufre - compuesto covalente formado por un átomo de azufre y dos átomos de oxígeno.",
+    multipleChoice: [
+      { id: 'A', text: 'Monóxido de azufre', isCorrect: false },
+      { id: 'B', text: 'Dióxido de azufre', isCorrect: true },
+      { id: 'C', text: 'Trióxido de azufre', isCorrect: false },
+      { id: 'D', text: 'Dióxido de carbono', isCorrect: false }
+    ]
+  },
+  {
+    id: 21,
+    question: "Escriba el nombre del siguiente compuesto químico: Fe2O3",
+    answer: "Óxido de hierro III - compuesto iónico formado por dos átomos de hierro con número de oxidación +3 y tres átomos de oxígeno.",
+    multipleChoice: [
+      { id: 'A', text: 'Óxido de hierro II', isCorrect: false },
+      { id: 'B', text: 'Óxido de hierro III', isCorrect: true },
+      { id: 'C', text: 'Óxido de cobre II', isCorrect: false },
+      { id: 'D', text: 'Óxido de aluminio', isCorrect: false }
+    ]
+  },
+  {
+    id: 22,
+    question: "Escriba el nombre del siguiente compuesto químico: H2SO4",
+    answer: "Ácido sulfúrico - hidrácido formado por dos átomos de hidrógeno y un ion sulfato (SO4).",
+    multipleChoice: [
+      { id: 'A', text: 'Ácido sulfúrico', isCorrect: true },
+      { id: 'B', text: 'Ácido clorhídrico', isCorrect: false },
+      { id: 'C', text: 'Ácido nítrico', isCorrect: false },
+      { id: 'D', text: 'Ácido fosfórico', isCorrect: false }
+    ]
+  },
+  {
+    id: 23,
+    question: "Escriba el nombre del siguiente compuesto químico: HCl(ac)",
+    answer: "Ácido clorhídrico acuoso - disolución acuosa de cloruro de hidrógeno, ácido fuerte comúnmente usado en laboratorios.",
+    multipleChoice: [
+      { id: 'A', text: 'Ácido sulfúrico acuoso', isCorrect: false },
+      { id: 'B', text: 'Ácido nítrico acuoso', isCorrect: false },
+      { id: 'C', text: 'Ácido clorhídrico acuoso', isCorrect: true },
+      { id: 'D', text: 'Ácido fosfórico acuoso', isCorrect: false }
+    ]
+  },
+  {
+    id: 24,
+    question: "Escriba el nombre del siguiente compuesto químico: HBr(g)",
+    answer: "Bromuro de hidrógeno gaseoso - compuesto gaseoso formado por un átomo de hidrógeno y un átomo de bromo.",
+    multipleChoice: [
+      { id: 'A', text: 'Cloruro de hidrógeno gaseoso', isCorrect: false },
+      { id: 'B', text: 'Bromuro de hidrógeno gaseoso', isCorrect: true },
+      { id: 'C', text: 'Fluoruro de hidrógeno gaseoso', isCorrect: false },
+      { id: 'D', text: 'Yoduro de hidrógeno gaseoso', isCorrect: false }
     ]
   }
 ];

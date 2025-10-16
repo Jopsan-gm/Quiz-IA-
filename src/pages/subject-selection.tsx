@@ -12,34 +12,41 @@ export const SubjectSelectionPage: React.FC = () => {
   return (
     <div className="subject-selection-page">
       <div className="subject-selection-header">
-        <h1>📚 Selecciona tu Materia</h1>
+        <div className="header-icon">📚</div>
+        <h1>Selecciona tu Materia</h1>
         <p>Elige la materia para comenzar tu quiz</p>
       </div>
 
-      <div className="subject-cards-container">
-        <div 
-          className="subject-card social-studies"
+      <div className="subject-buttons-container">
+        <button 
+          className="subject-button social-studies"
           onClick={() => handleSubjectSelect('social-studies')}
         >
-          <div className="card-icon">🏛️</div>
-          <h2>Estudios Sociales</h2>
-          <p>Quiz de Desarrollo - Noveno Año</p>
-          <div className="card-description">
-            Historia, geografía y cívica
+          <div className="button-content">
+            <div className="subject-icon">🏛️</div>
+            <div className="subject-info">
+              <h2>Estudios Sociales</h2>
+              <p className="subject-subtitle">Quiz de Desarrollo - Noveno Año</p>
+              <p className="subject-description">Historia, geografía y cívica</p>
+            </div>
+            <div className="button-arrow">→</div>
           </div>
-        </div>
+        </button>
 
-        <div 
-          className="subject-card science"
+        <button 
+          className="subject-button science"
           onClick={() => handleSubjectSelect('science')}
         >
-          <div className="card-icon">🔬</div>
-          <h2>Ciencias</h2>
-          <p>Quiz de Desarrollo - Noveno Año</p>
-          <div className="card-description">
-            Biología, química y física
+          <div className="button-content">
+            <div className="subject-icon">🔬</div>
+            <div className="subject-info">
+              <h2>Ciencias</h2>
+              <p className="subject-subtitle">Quiz de Desarrollo - Noveno Año</p>
+              <p className="subject-description">Biología, química y física</p>
+            </div>
+            <div className="button-arrow">→</div>
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export const useAnswerEvaluation = () => {
   
   // Keywords and concepts for each question
   const questionKeywords: Record<number, string[]> = {
-    1: ['molécula', 'átomos', 'enlaces químicos', 'unidos', 'grupo', 'iguales', 'diferentes'],
+    1: ['moléculas compuestas', 'átomos', 'enlaces químicos', 'unidos', 'grupo', 'iguales', 'diferentes'],
     2: ['valencia', 'número de oxidación', 'electronos', 'ganar', 'perder', 'compartir', 'elemento'],
     3: ['molécula elemental', 'mismo elemento', 'átomos', 'idénticos', 'elemento puro'],
     4: ['molécula compuesta', 'diferentes elementos', 'átomos', 'compuesto', 'mezcla'],
@@ -20,7 +20,15 @@ export const useAnswerEvaluation = () => {
     13: ['óxido de cromo', 'Cr2O3', 'verde', 'pinturas', 'tintes', 'cromo', 'color'],
     14: ['dióxido de carbono', 'CO2', 'bebidas carbonatadas', 'carbonatadas', 'efervescencia'],
     15: ['cloruro de sodio', 'NaCl', 'sal', 'preservante', 'sazonar', 'conservante'],
-    16: ['ácido clorhídrico', 'HCl', 'limpiador', 'metales', 'hierro', 'corrosión', 'ácido']
+    16: ['ácido clorhídrico', 'HCl', 'limpiador', 'metales', 'hierro', 'corrosión', 'ácido'],
+    17: ['óxido de sodio', 'Na2O', 'sodio', 'oxígeno', 'compuesto iónico', 'metal'],
+    18: ['carbonato de calcio', 'CaCO3', 'calcio', 'carbonato', 'compuesto iónico', 'metal', 'radical oxígeno'],
+    19: ['dióxido de carbono', 'CO2', 'carbono', 'oxígeno', 'compuesto covalente', 'no metal'],
+    20: ['dióxido de azufre', 'SO2', 'azufre', 'oxígeno', 'compuesto covalente', 'no metal', 'radical oxígeno'],
+    21: ['óxido de hierro III', 'Fe2O3', 'hierro', 'oxígeno', 'compuesto iónico', 'metal'],
+    22: ['ácido sulfúrico', 'H2SO4', 'hidrógeno', 'sulfato', 'hidrácido', 'radical hidrógeno'],
+    23: ['ácido clorhídrico acuoso', 'HCl(ac)', 'cloruro de hidrógeno', 'acuoso', 'disolución', 'hidrácido'],
+    24: ['bromuro de hidrógeno gaseoso', 'HBr(g)', 'bromuro', 'hidrógeno', 'gaseoso', 'hidrácido']
   };
 
   // Evaluate development answer

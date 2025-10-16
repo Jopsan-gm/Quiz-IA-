@@ -31,16 +31,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   const [answer, setAnswer] = useState(currentAnswer);
   const [isListening, setIsListening] = useState(false);
   const [recognition, setRecognition] = useState<any>(null);
-  const [evaluation, setEvaluation] = useState<any>(null);
-  const [showEvaluation, setShowEvaluation] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const { evaluateDevelopmentAnswer, getSuggestedKeywords } = useAnswerEvaluation();
+  const { getSuggestedKeywords } = useAnswerEvaluation();
 
   // Clear answer field when question changes
   useEffect(() => {
     setAnswer('');
-    setEvaluation(null);
-    setShowEvaluation(false);
   }, [question.id]);
 
   // Initialize speech recognition
@@ -92,13 +88,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     onToggleMultipleChoiceMode();
   };
 
-  const handleEvaluateAnswer = () => {
-    if (answer.trim()) {
-      const result = evaluateDevelopmentAnswer(question.id, answer);
-      setEvaluation(result);
-      setShowEvaluation(true);
-    }
-  };
 
   const startListening = () => {
     if (recognition) {
@@ -203,42 +192,6 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
         </div>
       </div>
 
-      {/* Evaluation Section */}
-      <div className="evaluation-section">
-        <button
-          onClick={handleEvaluateAnswer}
-          className="evaluate-btn"
-          disabled={!answer.trim()}
-        >
-          📊 Evaluar Respuesta
-        </button>
-        
-        {showEvaluation && evaluation && (
-          <div className={`evaluation-result ${evaluation.isCorrect ? 'correct' : 'incorrect'}`}>
-            <div className="evaluation-header">
-              <h3>Evaluación de tu respuesta:</h3>
-              <div className="score-display">
-                Puntuación: <span className={`score ${evaluation.isCorrect ? 'good' : 'needs-improvement'}`}>
-                  {evaluation.score}%
-                </span>
-              </div>
-            </div>
-            <p className="feedback-text">{evaluation.feedback}</p>
-            {evaluation.matchedKeywords.length > 0 && (
-              <div className="matched-keywords">
-                <h4>Conceptos que incluiste:</h4>
-                <div className="keywords-list">
-                  {evaluation.matchedKeywords.map((keyword: string, index: number) => (
-                    <span key={index} className="keyword-tag matched">
-                      {keyword}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
 
       <div className="answer-toggle">
         <button 

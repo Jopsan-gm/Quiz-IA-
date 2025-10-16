@@ -1208,3 +1208,211 @@ body {
 .question-header {
   position: relative;
 }
+
+/* Subject Selection Page Styles */
+.subject-selection-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.subject-selection-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.header-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.subject-selection-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.subject-selection-header p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.subject-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.subject-button {
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.subject-button:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.subject-button:active {
+  transform: translateY(-4px);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.subject-icon {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.social-studies .subject-icon {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+}
+
+.science .subject-icon {
+  background: linear-gradient(135deg, #4834d4, #686de0);
+}
+
+.subject-info {
+  flex: 1;
+  text-align: left;
+}
+
+.subject-info h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+.subject-subtitle {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.subject-description {
+  font-size: 1rem;
+  color: #95a5a6;
+  margin: 0;
+}
+
+.button-arrow {
+  font-size: 2rem;
+  color: #bdc3c7;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.subject-button:hover .button-arrow {
+  color: #667eea;
+  transform: translateX(5px);
+}
+
+/* Background gradient overlay for each button */
+.subject-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.social-studies::before {
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 36, 0.1));
+}
+
+.science::before {
+  background: linear-gradient(135deg, rgba(72, 52, 212, 0.1), rgba(104, 109, 224, 0.1));
+}
+
+.subject-button:hover::before {
+  opacity: 1;
+}
+
+/* Responsive design for subject selection */
+@media (max-width: 768px) {
+  .subject-selection-page {
+    padding: 30px 15px;
+  }
+  
+  .header-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .subject-selection-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .subject-selection-header p {
+    font-size: 1.1rem;
+  }
+  
+  .subject-buttons-container {
+    gap: 20px;
+  }
+  
+  .button-content {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .subject-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .subject-info h2 {
+    font-size: 1.6rem;
+  }
+  
+  .subject-subtitle {
+    font-size: 1rem;
+  }
+  
+  .subject-description {
+    font-size: 0.9rem;
+  }
+  
+  .button-arrow {
+    font-size: 1.5rem;
+  }
+}
