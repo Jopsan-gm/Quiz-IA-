@@ -5,26 +5,22 @@ export const useAnswerEvaluation = () => {
   
   // Keywords and concepts for each question
   const questionKeywords: Record<number, string[]> = {
-    1: ['rutas comerciales', 'riquezas', 'expansión territorial', 'evangelizar', 'comercio', 'territorio', 'religión'],
-    2: ['brújula', 'astrolabio', 'cuadrante', 'carabela', 'mapas portulanos', 'navegación', 'instrumentos'],
-    3: ['monarquías', 'oro', 'especias', 'prestigio', 'poder', 'políticos', 'económicos', 'sociales'],
-    4: ['violentas', 'guerras', 'sometimiento', 'evangelización', 'explotación', 'conquista', 'indígenas'],
-    5: ['soldados', 'ambiciosos', 'riquezas', 'fama', 'tierras', 'conquistadores', 'militar'],
-    6: ['conquista', 'colonización', 'sometimiento militar', 'organización', 'poblamiento'],
-    7: ['caribe', 'centroamérica', 'aztecas', 'incas', 'estrategia', 'epidemias', 'alianzas'],
-    8: ['tecnología', 'alianzas indígenas', 'caballos', 'perros', 'tácticas militares', 'evangelización'],
-    9: ['epidemias', 'viruela', 'millones', 'resistencia indígena', 'catástrofe demográfica'],
-    10: ['destrucción', 'culturas', 'población', 'sometimiento', 'cambios', 'vida cotidiana'],
-    11: ['catolicismo', 'creencias indígenas', 'sincretismo', 'evangelización', 'religión'],
-    12: ['eurocéntrica', 'religiosa', 'espiritualidad', 'naturaleza', 'visión del mundo'],
-    13: ['despreciaban', 'religiones indígenas', 'naturaleza', 'recurso', 'actitud'],
-    14: ['consejo de indias', 'casa de contratación', 'virreinatos', 'capitanías', 'audiencia', 'cabildo'],
-    15: ['peninsulares', 'criollos', 'mestizos', 'indígenas', 'esclavos', 'jerarquía'],
-    16: ['castas', 'desigualdades', 'organización social', 'sociedad'],
-    17: ['iglesia', 'educación', 'cultura', 'moral', 'política', 'economía', 'poder'],
-    18: ['agricultura', 'minería', 'estratificada', 'monarquía', 'iglesia', 'características'],
-    19: ['dependientes', 'españa', 'comercio controlado', 'diversidad cultural', 'mezcla étnica'],
-    20: ['imperio español', 'expansión cultural', 'intercambio comercial', 'colonización']
+    1: ['molécula', 'átomos', 'enlaces químicos', 'unidos', 'grupo', 'iguales', 'diferentes'],
+    2: ['valencia', 'número de oxidación', 'electronos', 'ganar', 'perder', 'compartir', 'elemento'],
+    3: ['molécula elemental', 'mismo elemento', 'átomos', 'idénticos', 'elemento puro'],
+    4: ['molécula compuesta', 'diferentes elementos', 'átomos', 'compuesto', 'mezcla'],
+    5: ['fórmula química', 'representación gráfica', 'símbolos', 'compuesto', 'estructura'],
+    6: ['compuestos orgánicos', 'carbono', 'oxígeno', 'hidrógeno', 'orgánico', 'C', 'O', 'H'],
+    7: ['compuestos inorgánicos', 'sin carbono', 'inorgánico', 'metales', 'sales'],
+    8: ['número de oxidación', 'oxidación', 'carga', 'electrones', 'estado', 'tabla periódica'],
+    9: ['fórmula química', 'capacidad', 'combinación', 'enlaces', 'símbolos químicos'],
+    10: ['amoníaco', 'NH3', 'fertilizantes', 'nitrógeno', 'agricultura', 'nitrogenados'],
+    11: ['ácido clorhídrico', 'HCl', 'piscinas', 'refinación', 'petróleo', 'ácido'],
+    12: ['agua', 'H2O', 'disolvente universal', 'universal', 'disolver', 'hidrógeno', 'oxígeno'],
+    13: ['óxido de cromo', 'Cr2O3', 'verde', 'pinturas', 'tintes', 'cromo', 'color'],
+    14: ['dióxido de carbono', 'CO2', 'bebidas carbonatadas', 'carbonatadas', 'efervescencia'],
+    15: ['cloruro de sodio', 'NaCl', 'sal', 'preservante', 'sazonar', 'conservante'],
+    16: ['ácido clorhídrico', 'HCl', 'limpiador', 'metales', 'hierro', 'corrosión', 'ácido']
   };
 
   // Evaluate development answer
