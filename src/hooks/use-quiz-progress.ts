@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { QuizProgress } from '../types/quiz-types';
+import { QuizProgress, AppTheme } from '../types/quiz-types';
 
 // Hook for managing quiz progress and navigation
 export const useQuizProgress = (totalQuestions: number) => {
@@ -8,22 +8,28 @@ export const useQuizProgress = (totalQuestions: number) => {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Ensure all required fields exist
         return {
           currentQuestion: parsed.currentQuestion || 1,
           totalQuestions: parsed.totalQuestions || totalQuestions,
           completedQuestions: parsed.completedQuestions || 0,
           userAnswers: parsed.userAnswers || [],
-          isMultipleChoiceMode: parsed.isMultipleChoiceMode || false
+          isMultipleChoiceMode: parsed.isMultipleChoiceMode || false,
+          interactionMode: parsed.interactionMode || 'study',
+          theme: parsed.theme || 'midnight',
+          achievements: parsed.achievements || [],
+          examTimeLeft: parsed.examTimeLeft !== undefined ? parsed.examTimeLeft : 600 // 10 min default
         };
       } catch {
-        // If parsing fails, return default values
         return {
           currentQuestion: 1,
           totalQuestions,
           completedQuestions: 0,
           userAnswers: [],
-          isMultipleChoiceMode: false
+          isMultipleChoiceMode: false,
+          interactionMode: 'study',
+          theme: 'midnight',
+          achievements: [],
+          examTimeLeft: 600
         };
       }
     }
@@ -32,7 +38,11 @@ export const useQuizProgress = (totalQuestions: number) => {
       totalQuestions,
       completedQuestions: 0,
       userAnswers: [],
-      isMultipleChoiceMode: false
+      isMultipleChoiceMode: false,
+      interactionMode: 'study',
+      theme: 'midnight',
+      achievements: [],
+      examTimeLeft: 600
     };
   });
 
@@ -163,17 +173,46 @@ export const useQuizProgress = (totalQuestions: number) => {
     if (window.confirm('¿Estás seguro de que quieres reiniciar todo el progreso? Esta acción no se puede deshacer.')) {
       // Clear localStorage completely
       localStorage.removeItem('quizProgress');
-      
+
       // Reset progress state
       setProgress({
         currentQuestion: 1,
         totalQuestions,
         completedQuestions: 0,
         userAnswers: [],
-        isMultipleChoiceMode: false
+        isMultipleChoiceMode: false,
+        interactionMode: 'study',
+        theme: 'midnight',
+        achievements: [],
+        examTimeLeft: 600
       });
     }
   };
+
+  const setTheme = (theme: AppTheme) => {
+    setProgress(prev => ({ ...prev, theme }));
+  };
+
+  const setInteractionMode = (mode: 'study' | 'exam') => {
+    setProgress(prev => ({
+      ...prev,
+      interactionMode: mode,
+      examTimeLeft: mode === 'exam' ? 600 : undefined
+    }));
+  };
+
+  useEffect(() => {
+    let timer: any;
+    if (progress.interactionMode === 'exam' && progress.examTimeLeft !== undefined && progress.examTimeLeft > 0) {
+      timer = setInterval(() => {
+        setProgress(prev => ({
+          ...prev,
+          examTimeLeft: prev.examTimeLeft !== undefined ? prev.examTimeLeft - 1 : 0
+        }));
+      }, 1000);
+    }
+    return () => clearInterval(timer);
+  }, [progress.interactionMode, progress.examTimeLeft]);
 
   const getCurrentAnswer = (questionId: number): string => {
     const userAnswer = progress.userAnswers.find(
@@ -197,6 +236,8 @@ export const useQuizProgress = (totalQuestions: number) => {
     saveAnswer,
     saveMultipleChoiceAnswer,
     toggleMultipleChoiceMode,
+    setInteractionMode,
+    setTheme,
     resetProgress,
     getCurrentAnswer,
     getCurrentMultipleChoiceAnswer

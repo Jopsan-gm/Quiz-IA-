@@ -28,10 +28,30 @@ export interface UserAnswer {
   multipleChoiceAnswer?: string;
 }
 
+export interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  unlockedAt?: Date;
+}
+
+export interface QuizStats {
+  date: string;
+  score: number;
+  subject: string;
+}
+
+export type AppTheme = 'midnight' | 'forest' | 'sunset' | 'ocean';
+
 export interface QuizProgress {
   currentQuestion: number;
   totalQuestions: number;
   completedQuestions: number;
   userAnswers: UserAnswer[];
-  isMultipleChoiceMode: boolean; // Track current quiz mode
+  isMultipleChoiceMode: boolean;
+  interactionMode: 'study' | 'exam';
+  examTimeLeft?: number; // seconds
+  theme: AppTheme;
+  achievements: Achievement[];
 }
