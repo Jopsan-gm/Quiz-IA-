@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SubjectSelectionPage } from './pages/subject-selection';
 import { QuizPage } from './pages/quiz';
-import './styles/global.css';
+// import './styles/global.css';
+import './styles/tailwind.css';
 
 // Main entry point for the React application
 ReactDOM.createRoot(document.getElementById('root')!).render(
