@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="src/assets/branding/banner.png" alt="Quiz-IA Banner" width="100%">
-</p>
+>
 
 # Quiz-IA 🚀
 > **The ultimate AI-powered multi-subject learning platform.**
