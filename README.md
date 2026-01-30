@@ -1,60 +1,62 @@
-# - Quiz de Desarrollo IA
+<p align="center">
+  <img src="src/assets/branding/banner.png" alt="Quiz-IA Banner" width="100%">
+</p>
 
-Aplicación web para practicar preguntas de desarrollo para cualquier materia.
+# Quiz-IA 🚀
+> **The ultimate AI-powered multi-subject learning platform.**
 
-## Características
+Quiz-IA is a premium educational tool designed to transform how students prepare for exams. By combining a stunning modern interface with powerful analytical features, it provides a high-performance environment for mastering any subject.
 
-- **20 preguntas de desarrollo** basadas en el temario del examen
-- **Navegación secuencial** entre preguntas
-- **Campo de texto** para escribir respuestas
-- **Verificación de respuestas** con respuestas correctas
-- **Guardado automático** del progreso en el navegador
-- **Navegación directa** a cualquier pregunta
-- **Barra de progreso** visual
-- **Diseño responsive** para móviles y tablets
+## ✨ Key Features
 
-## Instalación
+- 🎭 **Thematic Personalization**: Choose between Midnight, Forest, Sunset, and Ocean themes.
+- ⏱️ **Exam Pro Timer**: Integrated circular countdown for timed pressure simulation.
+- 📈 **Growth Analytics**: Visual progress tracking with interactive charts.
+- 🏆 **Achievement System**: Unlock rewards as you master topics and maintain streaks.
+- 📄 **Smart PDF Export**: Generate custom review guides containing only your incorrect answers.
+- 📱 **Full PWA Support**: Optimized for desktop and mobile with offline capabilities.
 
-1. **Instalar dependencias:**
-```bash
-npm install
-```
+## 🛠️ Technology Stack
 
-2. **Ejecutar en modo desarrollo:**
-```bash
-npm run dev
-```
+- **Frontend**: React 18 & TypeScript
+- **Styling**: Tailwind CSS v4 (Modern Engine)
+- **Animations**: Framer Motion
+- **Charts**: Recharts
+- **PDF Engine**: jsPDF
+- **Build Tool**: Vite
 
-3. **Abrir en el navegador:**
-```
-http://localhost:3000
-```
+## 🚀 Getting Started
 
-## Uso
+1. **Clone & Install:**
+   ```bash
+   git clone [your-repo-url]
+   cd Quiz-IA
+   npm install
+   ```
 
-1. **Ver pregunta:** Se muestra una pregunta a la vez
-2. **Escribir respuesta:** Usar el campo de texto para desarrollar tu respuesta
-3. **Verificar:** Hacer clic en "Ver respuesta correcta" para comparar
-4. **Navegar:** Usar botones "Anterior" y "Siguiente" o la cuadrícula lateral
-5. **Guardar:** Las respuestas se guardan automáticamente
-6. **Progreso:** Seguimiento visual del avance en la barra lateral
+2. **Development:**
+   ```bash
+   npm run dev
+   ```
 
-## Estructura del Proyecto
+3. **Build for Production:**
+   ```bash
+   npm run build
+   ```
 
-```
+## 📁 Project Structure
+
+```text
 src/
-├── components/quiz/     # Componentes de la interfaz
-├── hooks/              # Lógica de negocio
-├── types/              # Definiciones de tipos
-├── data/               # Datos de preguntas
-├── pages/              # Páginas principales
-└── styles/             # Estilos CSS
+├── assets/branding/   # Logo and social banners
+├── components/quiz/   # Interface components (Cards, Stats, Navigation)
+├── hooks/             # Business logic (useQuizProgress, useAnswerEvaluation)
+├── pages/             # Main views (Dashboard, Quiz)
+├── styles/            # Tailwind v4 configuration
+└── types/             # TypeScript definitions
 ```
 
-## Tecnologías
-
-- React 18 + TypeScript
-- Vite para desarrollo
-- CSS Grid y Flexbox
-- LocalStorage para persistencia
-
+---
+<p align="center">
+  Built with ❤️ for students worldwide.
+</p>
