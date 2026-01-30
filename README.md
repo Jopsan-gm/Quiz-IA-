@@ -1,6 +1,6 @@
-# Estudios Sociales - Quiz de Desarrollo
+# - Quiz de Desarrollo IA
 
-Aplicación web para practicar preguntas de desarrollo de Estudios Sociales de Noveno Año.
+Aplicación web para practicar preguntas de desarrollo para cualquier materia.
 
 ## Características
 
