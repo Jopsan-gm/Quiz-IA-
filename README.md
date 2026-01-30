@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/branding/banner.png" alt="Quiz-IA Banner" width="100%">
+  <img src="src/assets/branding/banner.png" alt="Quiz-IA Banner" width="600">
 </p>
 
 # Quiz-IA 🚀
